@@ -131,3 +131,36 @@
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
+const Villain = new Humanoid ({
+  createdAt: new Date(),
+  dimensions: {
+    length: 3,
+    width: 3,
+    height: 3,
+  },
+  healthPoints: 125,
+  name: 'Dr Evil',
+  team: 'Axis',
+  weapons: [
+    'Double End Sword',
+    'Shield',
+  ],
+  language: 'Common Tongue',
+});
+
+const Hero = new Humanoid ({
+  createdAt: new Date(),
+  dimensions: {
+    length: 2.5,
+    width: 2.5,
+    height: 2.9,
+  },
+  healthPoints: 100,
+  name: 'Dr Evil',
+  team: 'Axis',
+  weapons: [
+    'Double End Sword',
+    'Shield',
+  ],
+  language: 'Common Tongue',
+});

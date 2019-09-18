@@ -2,9 +2,15 @@
 * in your own words. explain the four principle for the "this" keyword below.
 *
 * 1. Window/ Global Object Binding
+window/console object
 * 2. Implicit Binding
+Whenever a function is called by a preceding dot
+myObj.sayHello('Ryan')
 * 3. New binding
+const jerry = new CordialPerson('Newman')
 * 4. Explicit binding
+Whenever JavaScript’s call or apply method is used
+jerry.speak.call(newman); newman.speak.apply(jerry)
 *
 * write out a code example of each explanation above
 */
@@ -12,12 +18,11 @@
 // Principle 1
 // Window/ Global Object Binding
 // code example for Window Binding
-function fullName(name) {
+function sayFirstName(name) {
     console.log(this);
     return name;
 }
-fullName("James Aaron");
-
+console.log(sayFirstName("James"))
 // Principle 2
 // Implicit Binding
 // code example for Implicit Binding
@@ -28,8 +33,7 @@ const nameGreeting = {
       console.log(this);
     }
   };
-  nameGreeting.sayHello('James');
-
+nameGreeting.sayHello('James')  
 // Principle 3
 // New Binding
 // code example for New Binding
@@ -43,7 +47,7 @@ function wildAnimal(greeter) {
   }
   const tiger = new wildAnimal('Deer');
   const deer = new wildAnimal('Whitetail');
-  tiger.speak()
+  tiger.speak();
   deer.speak();
 // Principle 4
 // Explicit Binding
